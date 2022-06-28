@@ -2,7 +2,7 @@
 // deno-lint-ignore-file no-namespace prefer-namespace-keyword
 
 import { base64 as base64Mod, hex as hexMod } from "./deps.ts"
-import * as g from "./guardMod.ts"
+import * as g from "./guard~.ts"
 
 /**
  * Yet another attempt to build a confusion-free Deno data conversion library.

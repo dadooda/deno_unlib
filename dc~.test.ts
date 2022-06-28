@@ -1,11 +1,12 @@
 
-import { b64, bts, hex, str } from "./dcMod.ts"
+import { b64, bts, hex, str } from "./dc~.ts"
 import { colors as c } from "./deps.ts"
 import { assert as a } from "./depsT.ts"
 import { scope } from "./scope.ts"
 
 const doIt = () => { // Wrap {{{
 
+// OPTIMIZE: Use Deno's BDD.
 scope("b64", (name) => {
   const [ mod, smp ] = [ b64, tSample.b64 ]
 

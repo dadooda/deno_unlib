@@ -17,7 +17,7 @@ export function isAsyncFunction(x: unknown): x is Function {
   return (isObject(x) && x.constructor.name == "AsyncFunction")
 }
 
-export function isBoolean(x: unknown): x is Boolean {
+export function isBoolean(x: unknown): x is boolean {
   return (isObject(x) && x.constructor.name == "Boolean")
 }
 
