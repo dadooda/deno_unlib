@@ -3,17 +3,17 @@
 
 // Touch every module of the set. This is the subject of our testing.
 import {
-  delayIt,            // `async.ts`.
-  bench,              // `bench.ts`.
-  focus,              // `focus.ts`.
-  getFuncName,        // `func.ts`.
-  j,                  // `inspect.ts`.
-  m,                  // `m.ts`.
-  scope,              // `scope.ts`.
+  /* async.ts */    delayIt,
+  /* bench.ts */    bench,
+  /* focus.ts */    focus,
+  /* func.ts */     getFuncName,
+  /* inspect.ts */  j,
+  /* m.ts */        m,
+  /* scope.ts */    scope,
 
-  dc,                 // `dc~.ts`.
-  guard,              // `guard~.ts`.
-  str,                // `str~.ts`.
+  /* dc~.ts */      dc,
+  /* guard~.ts */   guard,
+  /* str~.ts */     str,
 } from "./mod.ts"
 
 // This is fairly formal, just to print the report line.
