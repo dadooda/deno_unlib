@@ -19,7 +19,7 @@ interface HasPrompt {
  *
  * ```ts
  * m("name", name, PROMPT)    // Output "name", then wait for line.
- * m("name", name, m.PROMPT)  // Same as above, but allows us to omit importing `PROMPT`.
+ * m("name", name, m.PROMPT)  // Same as above, but lets us omit importing `PROMPT`.
  * ```
  */
 export const PROMPT = Symbol("PROMPT")
@@ -128,7 +128,9 @@ interface XD {
 }
 
 /** External dependencies. */
-export const xd: XD = {
+export const mXd: XD = {
   printFn: console.debug,
   promptFn: prompt,
 }
+
+const xd = mXd

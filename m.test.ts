@@ -1,13 +1,13 @@
 
 import * as dummy from "./_dummy~.ts"
 import { assert as a } from "./depsT.ts"
-import { m, mkM, mkPrefixedM, mMute, PROMPT, xd } from "./m.ts"
+import { m, mkM, mkPrefixedM, mMute, mXd, PROMPT } from "./m.ts"
 import { scope } from "./scope.ts"
 
 //-------------------------------------- Config
 
-xd.printFn = (...args) => accu.push([ T, ...args ])
-xd.promptFn = (...args) => accu.push([ P, ...args ])
+mXd.printFn = (...args) => accu.push([ T, ...args ])
+mXd.promptFn = (...args) => accu.push([ P, ...args ])
 
 //-------------------------------------- Tests
 

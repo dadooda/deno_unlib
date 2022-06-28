@@ -21,6 +21,8 @@ interface XD {
 }
 
 /** External dependencies. */
-export const xd: XD = {
+export const benchXd: XD = {
   printFn: console.debug,
 }
+
+const xd = benchXd
