@@ -6,6 +6,7 @@
   "editor.tabSize": 2,
   "files.eol": "\n",
 
+  "importSorter.generalConfiguration.exclude": [ "mod.test.ts" ],
   "importSorter.generalConfiguration.sortOnBeforeSave": true,
   "importSorter.importStringConfiguration.hasSemicolon": false,
   "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.count": 110,
