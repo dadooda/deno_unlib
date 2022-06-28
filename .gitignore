@@ -1,0 +1,12 @@
+
+# Old etc.
+*.old*
+*.orig
+/*.patch
+*.ref*
+
+# IDE.
+/*.code-workspace
+
+# Project-specific.
+TODO.md
