@@ -10,6 +10,7 @@ it("guards", () => {
   expect(sample.SyncFunction, { isFunction: 1, isObject: 1, isSyncFunction: 1 })
   expect(sample.Uint8Array, { isObject: 1, isUint8Array: 1 })
 
+  expect(sample.integer, { isInteger: 1, isNumber: 1, isObject: 1 })
   expect(sample.number, { isNumber: 1, isObject: 1 })
   expect(sample.string, { isObject: 1, isString: 1 })
 
@@ -19,7 +20,6 @@ it("guards", () => {
   expect(sample.vNull, { isNull: 1 })
   expect(sample.vTrue, { isBoolean: 1, isObject: 1, isTrue: 1 })
   expect(sample.vUndefined, { isUndefined: 1 })
-  expect(sample.vZero, { isNumber: 1, isObject: 1 })
 })
 
 //-------------------------------------- Service
@@ -31,6 +31,7 @@ interface Result {
   isBoolean?: 1
   isFalse?: 1
   isFunction?: 1
+  isInteger?: 1
   isNull?: 1
   isNumber?: 1
   isObject?: 1
@@ -52,7 +53,8 @@ const sample = {
   SyncFunction: () => 5,
   Uint8Array: new Uint8Array([ 6, 7, 8 ]),
 
-  number: 1,
+  integer: 1,
+  number: 1.1,
   string: "lala",
 
   vEmptyString: "",
@@ -61,7 +63,6 @@ const sample = {
   vNull: null,
   vTrue: true,
   vUndefined: undefined,
-  vZero: 0,
 }
 
 function expect(value: Parameters<typeof recognize>[0], res: Result) {
@@ -77,6 +78,7 @@ function recognize(x: unknown): Result {
   if (g.isBoolean(x)) res.isBoolean = 1
   if (g.isFalse(x)) res.isFalse = 1
   if (g.isFunction(x)) res.isFunction = 1
+  if (g.isInteger(x)) res.isInteger = 1
   if (g.isNull(x)) res.isNull = 1
   if (g.isNumber(x)) res.isNumber = 1
   if (g.isObject(x)) res.isObject = 1

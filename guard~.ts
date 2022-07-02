@@ -30,6 +30,10 @@ export function isFunction(x: unknown): x is Function {
   return (isObject(x) && (isAsyncFunction(x) || isSyncFunction(x)))
 }
 
+export function isInteger(x: unknown): x is number {
+  return (isObject(x) && x.constructor.name == "Number" && Number.isInteger(x))
+}
+
 export function isNull(x: unknown): x is null {
   // NOTE: We NEED a `===` here, otherwise `undefined` will produce true.
   return (x === null)
