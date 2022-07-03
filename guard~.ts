@@ -8,6 +8,13 @@ export function isArray<T>(x: unknown): x is Array<T> {
   return (isObject(x) && x.constructor.name == "Array")
 }
 
+/** Ensure `guard` passes for each element of `x`. */
+export function isArrayOf<T>(x: unknown, guard: (x: T) => x is T): x is T[] {
+  // OPTIMIZE: Add tests.
+  if (!isArray<T>(x)) return false
+  return x.every((elem) => guard(elem))
+}
+
 export function isArrayBuffer(x: unknown): x is ArrayBuffer {
   return (isObject(x) && x.constructor.name == "ArrayBuffer")
 }
